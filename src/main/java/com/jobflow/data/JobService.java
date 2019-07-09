@@ -1,7 +1,7 @@
-package com.decisiv.jobs.service;
+package com.jobflow.data;
 
-import com.decisiv.jobs.entity.Job;
-import com.decisiv.jobs.entity.JobRepository;
+import com.jobflow.data.entity.Job;
+import com.jobflow.data.entity.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

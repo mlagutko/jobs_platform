@@ -1,4 +1,4 @@
-package com.decisiv.jobs.entity;
+package com.jobflow.data.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

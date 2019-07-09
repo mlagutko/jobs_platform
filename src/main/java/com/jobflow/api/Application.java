@@ -1,4 +1,4 @@
-package com.decisiv.jobs.api;
+package com.jobflow.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

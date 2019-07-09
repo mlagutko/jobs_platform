@@ -1,5 +1,7 @@
-package com.decisiv.jobs.entity;
+package com.jobflow.data;
 
+import com.jobflow.data.entity.Job;
+import com.jobflow.data.entity.JobRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

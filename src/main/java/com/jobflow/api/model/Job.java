@@ -1,5 +1,6 @@
 package com.jobflow.api.model;
 
+import com.jobflow.data.entity.JobEntity;
 import io.crnk.core.resource.annotations.JsonApiId;
 import io.crnk.core.resource.annotations.JsonApiResource;
 import lombok.AllArgsConstructor;

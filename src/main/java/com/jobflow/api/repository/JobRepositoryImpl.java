@@ -1,10 +1,8 @@
 package com.jobflow.api.repository;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 
+import com.jobflow.api.model.Jobs;
 import com.jobflow.data.entity.JobEntity;
 import com.jobflow.data.entity.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,16 +17,23 @@ import io.crnk.core.resource.list.ResourceList;
 @Component
 public class JobRepositoryImpl extends ResourceRepositoryBase<Job, Long> {
 
-  private Map<Long, Job> greetings = new HashMap<>();
+  @Autowired
+  JobRepository jobRepository;
 
   public JobRepositoryImpl() {
     super(Job.class);
 
-    greetings.put(1L, new Job(UUID.randomUUID(), "Hello World!"));
   }
 
   @Override
   public ResourceList<Job> findAll(QuerySpec querySpec) {
-    return querySpec.apply(greetings.values());
+    ensureJobExists();
+    return querySpec.apply(Jobs.fromEntities(jobRepository.findAll()));
+  }
+
+  private void ensureJobExists() {
+    List<JobEntity> jobs = jobRepository.findAll();
+    if (jobs.isEmpty())
+      jobRepository.saveAndFlush(JobEntity.builder().name("name").build());
   }
 }

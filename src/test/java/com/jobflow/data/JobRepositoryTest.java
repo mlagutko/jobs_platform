@@ -22,9 +22,9 @@ public class JobRepositoryTest {
 
   @Test
   public void myTest() throws Exception {
-    JobEntity ss = subject.save(JobEntity.builder().name("name").build());
+    JobEntity ss = subject.saveAndFlush(JobEntity.builder().name("name").build());
     List<JobEntity> all = subject.findAllByName("name");
-    JobEntity ss1 = subject.save(JobEntity.builder().name("name").build());
+    JobEntity ss1 = subject.saveAndFlush(JobEntity.builder().name("name").build());
 
   }
 }

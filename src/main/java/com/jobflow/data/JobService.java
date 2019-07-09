@@ -1,6 +1,6 @@
 package com.jobflow.data;
 
-import com.jobflow.data.entity.Job;
+import com.jobflow.data.entity.JobEntity;
 import com.jobflow.data.entity.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 public class JobService {
 
   @Autowired
-  private final JobRepository addressRepository;
+  private final JobRepository jobRepository;
 
-  public JobService(JobRepository addressRepository){
-    this.addressRepository = addressRepository;
+  public JobService(JobRepository jobRepository){
+    this.jobRepository = jobRepository;
   }
 
-  public void createJob(Job address){
-    addressRepository.save(address);
+  public void createJob(JobEntity address){
+    jobRepository.save(address);
   }
 }

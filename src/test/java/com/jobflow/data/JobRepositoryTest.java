@@ -1,19 +1,20 @@
 package com.jobflow.data;
 
-import com.jobflow.data.entity.Job;
+import com.jobflow.api.Application;
+import com.jobflow.data.entity.JobEntity;
 import com.jobflow.data.entity.JobRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
 @RunWith(SpringRunner.class)
-@DataJpaTest
 @AutoConfigureTestDatabase(replace=AutoConfigureTestDatabase.Replace.NONE)
+@SpringBootTest(classes = Application.class)
 public class JobRepositoryTest {
 
   @Autowired
@@ -21,9 +22,9 @@ public class JobRepositoryTest {
 
   @Test
   public void myTest() throws Exception {
-    Job ss = subject.save(new Job().builder().name("name").build());
-    List<Job> all = subject.findAllByName("name");
-    Job ss1 = subject.save(new Job().builder().name("name").build());
+    JobEntity ss = subject.save(JobEntity.builder().name("name").build());
+    List<JobEntity> all = subject.findAllByName("name");
+    JobEntity ss1 = subject.save(JobEntity.builder().name("name").build());
 
   }
 }

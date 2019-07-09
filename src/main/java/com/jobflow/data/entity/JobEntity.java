@@ -14,7 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Job {
+public class JobEntity {
   @Id
   @GeneratedValue(generator = "UUID")
   @GenericGenerator(

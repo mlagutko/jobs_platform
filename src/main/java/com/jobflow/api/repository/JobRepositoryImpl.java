@@ -1,9 +1,13 @@
 package com.jobflow.api.repository;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import com.jobflow.data.entity.JobEntity;
+import com.jobflow.data.entity.JobRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.jobflow.api.model.Job;
@@ -24,7 +28,7 @@ public class JobRepositoryImpl extends ResourceRepositoryBase<Job, Long> {
   }
 
   @Override
-  public synchronized ResourceList<Job> findAll(QuerySpec querySpec) {
+  public ResourceList<Job> findAll(QuerySpec querySpec) {
     return querySpec.apply(greetings.values());
   }
 }

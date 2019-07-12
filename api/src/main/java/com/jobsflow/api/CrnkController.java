@@ -1,4 +1,4 @@
-package com.jobflow.api;
+package com.jobsflow.api;
 
 import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,7 +1,6 @@
-package com.jobflow.api.model;
+package com.jobsflow.api.model;
 
-import com.jobflow.api.model.Job;
-import com.jobflow.data.entity.JobEntity;
+import com.jobsflow.data.entity.JobEntity;
 
 import java.util.List;
 import java.util.stream.Collectors;

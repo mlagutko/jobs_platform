@@ -1,14 +1,13 @@
-package com.jobflow.api.repository;
+package com.jobsflow.api.repository;
 
 import java.util.List;
 
-import com.jobflow.api.model.Jobs;
-import com.jobflow.data.entity.JobEntity;
-import com.jobflow.data.entity.JobRepository;
+import com.jobsflow.api.model.Jobs;
+import com.jobsflow.data.entity.JobEntity;
+import com.jobsflow.data.entity.JobRepository;
+import com.jobsflow.api.model.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.jobflow.api.model.Job;
 
 import io.crnk.core.queryspec.QuerySpec;
 import io.crnk.core.repository.ResourceRepositoryBase;

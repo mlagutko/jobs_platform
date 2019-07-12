@@ -1,6 +1,5 @@
 package com.jobflow.data;
 
-import com.jobflow.api.Application;
 import com.jobflow.data.entity.JobEntity;
 import com.jobflow.data.entity.JobRepository;
 import org.junit.Test;
